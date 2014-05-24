@@ -5,7 +5,7 @@
 ICCardタイプの免許書に格納された住所情報を標準出力に出力する。
 
 ## 使用方法 ##
-`$ carLicenseCardReader datafile`
+> $ carLicenseCardReader datafile
 
 ## 詳細 ##
 ICCardタイプの免許書の住所ファイルは、制御コード無しのJISで記録されている。
@@ -29,6 +29,7 @@ ICCardタイプの免許書の住所ファイルは、制御コード無しのJI
 ###### 意味 ######
 
 キー | タクの値
+- | -
 値 | TLVのVを第一引数に取る関数へのリファレンス
 
 ## 参照 ##
