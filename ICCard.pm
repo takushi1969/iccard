@@ -4,7 +4,7 @@ use strict;
 use utf8;
 use encoding "utf8";
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 
 sub new {
@@ -39,8 +39,10 @@ sub readTLV {
     $len = unpack "C", $len;
     
     # read all data at once.
-    read $fh, $data, $len or die "There is no data to be read.";
-    length($data) == $len or die "The lenght of read data is too short.";
+    if ($len) {
+        read $fh, $data, $len or die "There is no data to be read.";
+        length($data) == $len or die "The lenght of read data is too short.";
+    }
     
     return ($tag, $data);
 }
